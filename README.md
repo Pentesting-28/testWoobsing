@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://i.postimg.cc/s2y1cwNv/image.png" width="1000" height="500" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -7,6 +7,75 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Laravel example 
+
+> Practical exercise implementation of middlewares
+
+> If the account is not verified using the email_verified_at field, redirect to a /verification page
+
+> If the user's last session was more than a day ago, redirect him to a page called /sessions
+
+> When the user logs in, a Cookie called origin_session is stored if the user has role 1 and the origin IP is 127.0.0.1
+
+> Authentication by Two Factor (it can be your own or from an external provider) with a maximum session of 30 minutes
+
+## Getting started
+
+> This project runs with Laravel version 9.19
+
+Assuming you've already installed on your machine: PHP (>= 8.0.2), [Laravel](https://laravel.com), [Composer](https://getcomposer.org) and [Node.js](https://nodejs.org).
+
+``` bash
+# We access the directory of our project
+cd testWoobsing-develop
+
+# install dependencies
+composer install
+npm install
+
+# build CSS and JS assets
+npm run build
+
+# create .env file and generate the application key
+cp .env.example .env
+php artisan key:generate
+
+# We configure the environment variables of the .env file 
+# for the connection to the database and mail configuration.
+  
+DB_CONNECTION=
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+  
+MAIL_MAILER=
+MAIL_HOST=
+MAIL_PORT=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=
+MAIL_FROM_ADDRESS=
+MAIL_FROM_NAME=
+  
+# Running migrations and seed
+ php artisan migrate
+ php artisan db:seed
+ 
+# We will reset all cache
+php artisan optimize:clear
+```
+
+Then launch the server:
+
+``` bash
+php artisan serve
+```
+
+The Laravel sample project is now up and running! Access it at http://127.0.0.1:8000
+
+<p align="center"><a href="https://jetstream.laravel.com/2.x/installation.html" target="_blank"><img src="https://i.ytimg.com/vi/9J_4xpJt3nM/maxresdefault.jpg" width="1000" height="400" alt="Laravel Logo"></a></p>
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
